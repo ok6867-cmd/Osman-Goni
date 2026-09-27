@@ -1,0 +1,6 @@
+{
+  "name": "Ekta CV Studio - Professional CV Builder",
+  "description": "Create customizable, ATS-friendly professional CVs with real-time formatting, live preview, multiple templates, AI-powered writing assistance, and instant export options.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom font utilities for resume typography */
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-merriweather { font-family: 'Merriweather', serif; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-outfit { font-family: 'Outfit', sans-serif; }
+.font-jetbrains { font-family: 'JetBrains Mono', monospace; }
+.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+.font-cinzel { font-family: 'Cinzel', serif; }
+
+/* Print styling specifically tailored for pixel-perfect PDF export */
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide all app chrome, sidebars, buttons, toolbars when printing */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Make the printable resume container fill the page exactly */
+  .print-only-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .resume-paper {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    page-break-after: auto;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0;
+    size: auto;
+  }
+}
+
+/* Subtle scrollbars for editor */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
